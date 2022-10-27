@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+
+<div id="articles">
+  <% @articles.each do |article| %>
+  <h1><%= article.title %></h1>
+   <h2> <%= article.author %></h2>
+    <%= truncate(article.content,  length: 340) %>
+    <%= link_to "Ler mais", article %>
+  <% end %>
+</div>
+
+<%# <%= link_to "Novo artigo", new_article_path %> 
